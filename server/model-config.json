@@ -1,0 +1,143 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "BookingTypes": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "ClinicBookingTypes": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "DoctorBookingTypes": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "DoctorClinics": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "Doctors": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "Gallery": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "People": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "RosterDays": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "RosterPlaces": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "Reviews": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "RosterTimes": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "Clinics": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "Companies": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "OAngularLog": {
+    "dataSource": "obs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "OClientLogs": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "Rosters": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "Calendars": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "CalendarsV": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "RostersV": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "PatientRelationships": {
+    "dataSource": "obs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Patients": {
+    "dataSource": "obs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "PatientAppointments": {
+    "dataSource": "obs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "CompanyPatients": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "Appointments": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "AppointmentReserves": {
+    "dataSource": "obs",
+    "public": true
+  }
+}

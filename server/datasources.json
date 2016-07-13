@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "obs": {
+    "host": "localhost",
+    "port": 3307,
+    "database": "ocs",
+    "password": "root",
+    "name": "obs",
+    "user": "root",
+    "connector": "mysql"
+  }
+}
