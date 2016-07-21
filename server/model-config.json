@@ -139,5 +139,13 @@
   "AppointmentReserves": {
     "dataSource": "obs",
     "public": true
+  },
+  "Files": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "Container": {
+    "dataSource": "storage",
+    "public": true
   }
 }
