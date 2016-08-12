@@ -75,22 +75,6 @@
       },
       "_selectable": false
     },
-    "signature": {
-      "type": "Binary",
-      "required": false,
-      "length": 65535,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "signature",
-        "dataType": "blob",
-        "dataLength": 65535,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
     "timeInterval": {
       "type": "Number",
       "required": false,

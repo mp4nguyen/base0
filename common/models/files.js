@@ -30,16 +30,17 @@ module.exports = function(Files) {
 
   Files.upload = function (ctx,options,cb) {
 
-      console.log('ctx=',ctx.req.query,ctx.req.headers,'options=');
+      console.log('ctx=',ctx.req.query,'body=',ctx.req.body,'files=',ctx.req.files,'options=');
       if(!options) options = {};
       if(ctx.req.query.container){
-        console.log('have container');
+        console.log('have container...');
         ctx.req.params.container = ctx.req.query.container;
         Files.app.models.Container.upload(ctx.req,ctx.result,options,function (err,fileObj) {
             if(err) {
-                console.log('err = ',err);
+                console.log('fail to upload photo = ',err);
                 cb(err);
             } else {
+                console.log('upload successfully ',fileObj);
                 var fileInfo = fileObj.files.file[0];
                 Files.create({
                     fileId: 0,

@@ -147,5 +147,21 @@
   "Container": {
     "dataSource": "storage",
     "public": true
+  },
+  "BookingsV": {
+    "dataSource": "obs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "PatientAppointmentsV": {
+    "dataSource": "obs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "DoctorsV": {
+    "dataSource": "obs",
+    "public": true
   }
 }

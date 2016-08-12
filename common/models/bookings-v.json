@@ -1,5 +1,5 @@
 {
-  "name": "People",
+  "name": "BookingsV",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
@@ -7,10 +7,10 @@
   },
   "mysql": {
     "schema": "ocs",
-    "table": "People"
+    "table": "bookings_v"
   },
   "properties": {
-    "personId": {
+    "calendarId": {
       "type": "Number",
       "id": true,
       "required": true,
@@ -18,7 +18,7 @@
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "person_id",
+        "columnName": "calendar_id",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -27,14 +27,14 @@
       },
       "_selectable": false
     },
-    "isenable": {
+    "companyId": {
       "type": "Number",
       "required": true,
       "length": null,
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "isEnable",
+        "columnName": "company_id",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -43,9 +43,201 @@
       },
       "_selectable": false
     },
+    "resourceId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "resourceId",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "rosterId": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "roster_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "clinicId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "clinic_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "bookingTypeId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "booking_type_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "bookingTypeName": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "booking_type_name",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "doctorId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "doctor_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "fromTime": {
+      "type": "Date",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "from_time",
+        "dataType": "datetime",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "toTime": {
+      "type": "Date",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "to_time",
+        "dataType": "datetime",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "start": {
+      "type": "Date",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "start",
+        "dataType": "datetime",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "end": {
+      "type": "Date",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "end",
+        "dataType": "datetime",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "timeInterval": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "time_interval",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "patientPersonId": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "patient_person_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
     "title": {
       "type": "String",
-      "required": true,
+      "required": false,
       "length": 10,
       "precision": null,
       "scale": null,
@@ -55,13 +247,13 @@
         "dataLength": 10,
         "dataPrecision": null,
         "dataScale": null,
-        "nullable": "N"
+        "nullable": "Y"
       },
-      "_selectable": false
+      "_selectable": true
     },
     "firstName": {
       "type": "String",
-      "required": true,
+      "required": false,
       "length": 50,
       "precision": null,
       "scale": null,
@@ -71,13 +263,13 @@
         "dataLength": 50,
         "dataPrecision": null,
         "dataScale": null,
-        "nullable": "N"
+        "nullable": "Y"
       },
-      "_selectable": false
+      "_selectable": true
     },
     "lastName": {
       "type": "String",
-      "required": true,
+      "required": false,
       "length": 50,
       "precision": null,
       "scale": null,
@@ -87,13 +279,13 @@
         "dataLength": 50,
         "dataPrecision": null,
         "dataScale": null,
-        "nullable": "N"
+        "nullable": "Y"
       },
-      "_selectable": false
+      "_selectable": true
     },
     "dob": {
       "type": "Date",
-      "required": true,
+      "required": false,
       "length": null,
       "precision": null,
       "scale": null,
@@ -103,13 +295,13 @@
         "dataLength": null,
         "dataPrecision": null,
         "dataScale": null,
-        "nullable": "N"
+        "nullable": "Y"
       },
-      "_selectable": false
+      "_selectable": true
     },
     "gender": {
       "type": "String",
-      "required": true,
+      "required": false,
       "length": 6,
       "precision": null,
       "scale": null,
@@ -119,9 +311,9 @@
         "dataLength": 6,
         "dataPrecision": null,
         "dataScale": null,
-        "nullable": "N"
+        "nullable": "Y"
       },
-      "_selectable": false
+      "_selectable": true
     },
     "phone": {
       "type": "String",
@@ -149,22 +341,6 @@
         "columnName": "mobile",
         "dataType": "varchar",
         "dataLength": 20,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
-    "email": {
-      "type": "String",
-      "required": false,
-      "length": 100,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "email",
-        "dataType": "varchar",
-        "dataLength": 100,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
@@ -203,22 +379,6 @@
       },
       "_selectable": true
     },
-    "suburbDistrict": {
-      "type": "String",
-      "required": false,
-      "length": 50,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "suburb_district",
-        "dataType": "varchar",
-        "dataLength": 50,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
     "ward": {
       "type": "String",
       "required": false,
@@ -227,6 +387,22 @@
       "scale": null,
       "mysql": {
         "columnName": "ward",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "suburbDistrict": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "suburb_district",
         "dataType": "varchar",
         "dataLength": 50,
         "dataPrecision": null,
@@ -283,94 +459,62 @@
       },
       "_selectable": true
     },
-    "ispatient": {
-      "type": "Number",
+    "email": {
+      "type": "String",
       "required": false,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
+      "length": 100,
+      "precision": null,
+      "scale": null,
       "mysql": {
-        "columnName": "isPatient",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
+        "columnName": "email",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "dataPrecision": null,
+        "dataScale": null,
         "nullable": "Y"
       },
       "_selectable": true
     },
-    "isdoctor": {
-      "type": "Number",
+    "apptStatus": {
+      "type": "String",
       "required": false,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
+      "length": 10,
+      "precision": null,
+      "scale": null,
       "mysql": {
-        "columnName": "isDoctor",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
+        "columnName": "appt_status",
+        "dataType": "varchar",
+        "dataLength": 10,
+        "dataPrecision": null,
+        "dataScale": null,
         "nullable": "Y"
       },
       "_selectable": true
     },
-    "avatarId": {
-      "type": "Number",
+    "apptType": {
+      "type": "String",
       "required": false,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
+      "length": 10,
+      "precision": null,
+      "scale": null,
       "mysql": {
-        "columnName": "avatar_id",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
+        "columnName": "appt_type",
+        "dataType": "varchar",
+        "dataLength": 10,
+        "dataPrecision": null,
+        "dataScale": null,
         "nullable": "Y"
       },
       "_selectable": true
     },
-    "signatureId": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "signature_id",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
-    "createdBy": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "created_by",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
-    "creationDate": {
+    "requireDate": {
       "type": "Date",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "creation_date",
+        "columnName": "require_date",
         "dataType": "datetime",
         "dataLength": null,
         "dataPrecision": null,
@@ -379,68 +523,25 @@
       },
       "_selectable": true
     },
-    "lastUpdatedBy": {
-      "type": "Number",
+    "description": {
+      "type": "String",
       "required": false,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "last_updated_by",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
-    "lastUpdateDate": {
-      "type": "Date",
-      "required": false,
-      "length": null,
+      "length": 1000,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "last_update_date",
-        "dataType": "datetime",
-        "dataLength": null,
+        "columnName": "description",
+        "dataType": "varchar",
+        "dataLength": 1000,
         "dataPrecision": null,
         "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
-    "sourceId": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "source_id",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
         "nullable": "Y"
       },
       "_selectable": true
     }
   },
   "validations": [],
-  "relations": {
-    "Avatar": {
-      "type": "belongsTo",
-      "model": "Files",
-      "foreignKey": "avatarId"
-    },
-    "Signature": {
-      "type": "belongsTo",
-      "model": "Files",
-      "foreignKey": "signatureId"
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": []
 }

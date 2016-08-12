@@ -27,6 +27,22 @@
       },
       "_selectable": false
     },
+    "resourceId": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
     "doctorId": {
       "type": "Number",
       "required": false,
@@ -59,11 +75,11 @@
       },
       "_selectable": true
     },
-    "title": {
+    "doctorTitle": {
       "type": "String",
       "required": false,
       "mysql": {
-        "columnName": "title",
+        "columnName": "doctor_title",
         "dataType": "varchar",
         "nullable": "Y"
       },
@@ -158,6 +174,60 @@
       },
       "_selectable": true
     },
+    "fromTime": {
+      "type": "String",
+      "required": false,
+      "mysql": {
+        "columnName": "from_time",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "toTime": {
+      "type": "String",
+      "required": false,
+      "mysql": {
+        "columnName": "to_time",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "start": {
+      "type": "String",
+      "required": false,
+      "mysql": {
+        "columnName": "from_date_in_str",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "end": {
+      "type": "String",
+      "required": false,
+      "mysql": {
+        "columnName": "to_date_in_str",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "title": {
+      "type": "String",
+      "required": false,
+      "mysql": {
+        "columnName": "title",
+        "dataType": "varchar",
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
     "workingSiteId": {
       "type": "Number",
       "required": false,
@@ -170,6 +240,102 @@
         "dataLength": null,
         "dataPrecision": 10,
         "dataScale": 0,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "clinicName": {
+      "type": "String",
+      "required": false,
+      "length": 100,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "clinic_name",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "address": {
+      "type": "String",
+      "required": false,
+      "length": 100,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "address",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "suburbDistrict": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "suburb_district",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "ward": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "ward",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "stateProvince": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "state_province",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "country": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "country",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
         "nullable": "Y"
       },
       "_selectable": true
@@ -190,7 +356,39 @@
       },
       "_selectable": true
     },
+    "bookingTypeName": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "booking_type_name",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
     "timeInterval": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "time_interval",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "duration": {
       "type": "Number",
       "required": false,
       "length": null,
@@ -320,7 +518,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "events": {
+      "type": "hasMany",
+      "model": "PatientAppointmentsV",
+      "foreignKey": "rosterId"
+    }
+  },
   "acls": [],
   "methods": []
 }
