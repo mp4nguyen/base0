@@ -42,7 +42,7 @@
         "nullable": "Y"
       },
       "_selectable": true
-    },    
+    },
     "doctorId": {
       "type": "Number",
       "required": false,

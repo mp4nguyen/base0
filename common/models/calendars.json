@@ -42,7 +42,7 @@
         "nullable": "Y"
       },
       "_selectable": true
-    },      
+    },
     "rosterId": {
       "type": "Number",
       "required": false,

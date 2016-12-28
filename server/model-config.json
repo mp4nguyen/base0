@@ -163,5 +163,9 @@
   "DoctorsV": {
     "dataSource": "obs",
     "public": true
+  },
+  "PatientsV": {
+    "dataSource": "obs",
+    "public": true
   }
 }

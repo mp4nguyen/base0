@@ -278,7 +278,7 @@
         "nullable": "Y"
       },
       "_selectable": true
-    },    
+    },
     "duration": {
       "type": "Number",
       "required": false,
