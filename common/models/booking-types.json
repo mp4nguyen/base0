@@ -43,6 +43,21 @@
       },
       "_selectable": true
     },
+    "icon": {
+      "type": "String",
+      "required": false,
+      "length": 500000,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "icon",
+        "dataType": "text",
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
     "isenable": {
       "type": "Number",
       "required": true,
@@ -127,5 +142,5 @@
   "validations": [],
   "relations": {},
   "acls": [],
-  "methods": []
+  "methods": {}
 }

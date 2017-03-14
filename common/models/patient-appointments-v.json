@@ -447,15 +447,13 @@
       "_selectable": true
     },
     "fromTime": {
-      "type": "String",
+      "type": "Date",
       "required": false,
-      "length": 30,
       "precision": null,
       "scale": null,
       "mysql": {
         "columnName": "from_time",
-        "dataType": "varchar",
-        "dataLength": 30,
+        "dataType": "datetime",
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
@@ -463,15 +461,13 @@
       "_selectable": true
     },
     "toTime": {
-      "type": "String",
+      "type": "Date",
       "required": false,
-      "length": 30,
       "precision": null,
       "scale": null,
       "mysql": {
         "columnName": "to_time",
-        "dataType": "varchar",
-        "dataLength": 30,
+        "dataType": "datetime",
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
@@ -578,5 +574,5 @@
   "validations": [],
   "relations": {},
   "acls": [],
-  "methods": []
+  "methods": {}
 }

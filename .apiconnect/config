@@ -1,0 +1,5 @@
+UI_Default_Server:
+  dedicated: true
+  name: phuong
+  displayName: phuong
+  host: phuong

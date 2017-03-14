@@ -167,5 +167,17 @@
   "PatientsV": {
     "dataSource": "obs",
     "public": true
+  },
+  "Accounts": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "CompanyAccountsV": {
+    "dataSource": "obs",
+    "public": true
+  },
+  "ClinicDoctorsV": {
+    "dataSource": "obs",
+    "public": true
   }
 }

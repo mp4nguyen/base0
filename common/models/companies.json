@@ -285,7 +285,33 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "Clinics": {
+      "type": "hasMany",
+      "model": "Clinics",
+      "foreignKey": "companyId"
+    },
+    "Accounts": {
+      "type": "hasMany",
+      "model": "CompanyAccountsV",
+      "foreignKey": "companyId"
+    },
+    "Galleries": {
+      "type": "hasMany",
+      "model": "Gallery",
+      "foreignKey": "companyId"
+    },
+    "Reviews": {
+      "type": "hasMany",
+      "model": "Review",
+      "foreignKey": "companyId"
+    },
+    "Doctors": {
+      "type": "hasMany",
+      "model": "Doctors",
+      "foreignKey": "companyId"
+    }
+  },
   "acls": [],
-  "methods": []
+  "methods": {}
 }

@@ -1,16 +1,16 @@
 {
-  "name": "Users",
+  "name": "Accounts",
   "base": "User",
   "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "mysql": {
-    "schema": "sakila",
-    "table": "users"
+    "schema": "OCS",
+    "table": "accounts"
   },
   "properties": {
-    "userId": {
+    "id": {
       "type": "Number",
       "id": true,
       "required": true,
@@ -18,7 +18,7 @@
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "user_id",
+        "columnName": "id",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -226,7 +226,7 @@
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "user_name",
+        "columnName": "username",
         "dataType": "varchar",
         "dataLength": 512,
         "dataPrecision": null,
@@ -453,5 +453,5 @@
       "property": "updatePassword"
     }
   ],
-  "methods": []
+  "methods": {}
 }

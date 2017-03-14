@@ -175,45 +175,65 @@
       "_selectable": true
     },
     "fromTime": {
-      "type": "String",
+      "type": "Date",
       "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
       "mysql": {
-        "columnName": "from_time",
-        "dataType": "varchar",
-        "dataLength": 30,
+        "columnName": "from_date",
+        "dataType": "datetime",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
         "nullable": "Y"
       },
       "_selectable": true
     },
     "toTime": {
-      "type": "String",
+      "type": "Date",
       "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
       "mysql": {
-        "columnName": "to_time",
-        "dataType": "varchar",
-        "dataLength": 30,
+        "columnName": "to_date",
+        "dataType": "datetime",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
         "nullable": "Y"
       },
       "_selectable": true
     },
     "start": {
-      "type": "String",
+      "type": "Date",
       "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
       "mysql": {
-        "columnName": "from_date_in_str",
-        "dataType": "varchar",
-        "dataLength": 30,
+        "columnName": "from_date",
+        "dataType": "datetime",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
         "nullable": "Y"
       },
       "_selectable": true
     },
     "end": {
-      "type": "String",
+      "type": "Date",
       "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
       "mysql": {
-        "columnName": "to_date_in_str",
-        "dataType": "varchar",
-        "dataLength": 30,
+        "columnName": "to_date",
+        "dataType": "datetime",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
         "nullable": "Y"
       },
       "_selectable": true
@@ -526,5 +546,5 @@
     }
   },
   "acls": [],
-  "methods": []
+  "methods": {}
 }
